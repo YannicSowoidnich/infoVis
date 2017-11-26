@@ -1,4 +1,4 @@
-package de.uni_stuttgart.vis.submissions;
+package de.uni_stuttgart.vis.submissions.assignment1Zelenik;
 
 import java.awt.Font;
 import java.util.Collections;
@@ -6,12 +6,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 import de.uni_stuttgart.vis.data.WeightedString;
-import de.uni_stuttgart.vis.data.wordcloud.DataProvider;
+import de.uni_stuttgart.vis.data.assignment1.wordcloud.DataProvider;
 import de.uni_stuttgart.vis.framework.InfoVisFramework;
 import de.uni_stuttgart.vis.geom.AbstractGeometry;
 import de.uni_stuttgart.vis.geom.Rectangle;
 
-public class Submission1_LastNameOfTheGroupLeader extends InfoVisFramework{
+public class Submission1_Zelenik extends InfoVisFramework{
 	
 	public Rectangle createGeometry(String text, Font font) {
 		Rectangle rect = new Rectangle(20, 20, 20, 20);
@@ -22,7 +22,7 @@ public class Submission1_LastNameOfTheGroupLeader extends InfoVisFramework{
 
 	
 	public static void main(String[] args) {
-		Submission1_LastNameOfTheGroupLeader sub1 = new Submission1_LastNameOfTheGroupLeader();
+		Submission1_Zelenik sub1 = new Submission1_Zelenik();
 	}
 
 	@Override

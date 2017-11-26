@@ -1,4 +1,4 @@
-package de.uni_stuttgart.vis.data.wordcloud;
+package de.uni_stuttgart.vis.data.assignment1.wordcloud;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
