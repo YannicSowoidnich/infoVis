@@ -12,15 +12,6 @@ import de.uni_stuttgart.vis.geom.AbstractGeometry;
 import de.uni_stuttgart.vis.geom.Rectangle;
 
 public class Submission1_LastNameOfTheGroupLeader extends InfoVisFramework{
-	List<WeightedString> input;
-	List<AbstractGeometry> output;
-	AbstractGeometry entry;
-	Font defaultFont = new Rectangle(0,0,0,0).getFont();
-	Font font;
-	
-	public Submission1_LastNameOfTheGroupLeader() {
-		this.mapData();
-	}
 	
 	public Rectangle createGeometry(String text, Font font) {
 		Rectangle rect = new Rectangle(20, 20, 20, 20);
@@ -36,10 +27,15 @@ public class Submission1_LastNameOfTheGroupLeader extends InfoVisFramework{
 
 	@Override
 	public List<AbstractGeometry> mapData() {
-		this.input = new DataProvider().getWords();
+		List<WeightedString> input;
+		List<AbstractGeometry> output;
+		AbstractGeometry entry;
+		Font defaultFont = new Rectangle(0,0,0,0).getFont();
+		Font font;
+		input = new DataProvider().getWords();
 		output = new LinkedList<AbstractGeometry>();
-		Collections.sort(this.input);
-		for (int i = 0; i<this.input.size(); i++) {		
+		Collections.sort(input);
+		for (int i = 0; i<input.size(); i++) {		
 			font = new Font("Arial", defaultFont.getStyle(), input.get(i).getFrequency());
 			output.add(this.createGeometry(input.get(i).getText(), font));
 		}
